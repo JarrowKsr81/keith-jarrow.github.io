@@ -14,7 +14,7 @@
  */
 function length(string) {
     // YOUR CODE BELOW HERE //
-    // return input string's length property
+    // return input string's length property //
     return string.length;
 
 
@@ -26,6 +26,8 @@ function length(string) {
  */
 function toLowerCase(string) {
     // YOUR CODE BELOW HERE //
+    // return input string to lowercase //
+    return string.toLowerCase();
 
 
 
@@ -37,6 +39,8 @@ function toLowerCase(string) {
  */
 function toUpperCase(string) {
     // YOUR CODE BELOW HERE //
+    // return string forced to uppercase //
+    return string.toUpperCase();
 
 
 
@@ -58,6 +62,8 @@ function toUpperCase(string) {
  */
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
+    // return string forced to dash-case and enforce lowerCase //
+return string.replaceAll(' ', '-').toLowerCase();
 
 
 
@@ -78,6 +84,8 @@ function toDashCase(string) {
  */
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
+    // return string true if begins with that character otherwise false //
+return 
 
     
 
