@@ -85,12 +85,15 @@ return string.replaceAll(' ', '-').toLowerCase();
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
     // return string true if begins with that character otherwise false //
-return 
+        
+    return string.toLowerCase().startsWith(char.toLowerCase());
+         
+    }
 
     
 
     // YOUR CODE ABOVE HERE //
-}
+
 
 /**
  * Given an input String and a single character, return true if the String
@@ -106,7 +109,7 @@ return
  */
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
+return string.toUpperCase().endsWith(char.toUpperCase());
 
 
     // YOUR CODE ABOVE HERE //
@@ -119,7 +122,7 @@ function endsWith(string, char) {
  */
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+return stringOne.concat(stringTwo);
 
 
     // YOUR CODE ABOVE HERE //
@@ -139,7 +142,7 @@ function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
 
-
+return string.join(stringOne, stringTwo);
     // YOUR CODE ABOVE HERE //
 }
 
