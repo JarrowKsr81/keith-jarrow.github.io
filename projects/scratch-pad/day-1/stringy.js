@@ -142,7 +142,7 @@ function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
 
-return string.join(stringOne, stringTwo);
+return args.join('');
     // YOUR CODE ABOVE HERE //
 }
 
@@ -157,7 +157,7 @@ return string.join(stringOne, stringTwo);
  */
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+return (stringOne.length > stringTwo.length ? stringOne : stringTwo);
 
 
     // YOUR CODE ABOVE HERE //
@@ -172,7 +172,7 @@ function longest(stringOne, stringTwo) {
  */
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+return 
 
 
     // YOUR CODE ABOVE HERE //
