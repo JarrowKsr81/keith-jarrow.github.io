@@ -35,8 +35,61 @@
 
 // YOUR CODE GOES BELOW HERE //
 function makeContact(id, nameFirst, nameLast) {
+    var friends = [
+        {
+            nickname: 'bill',
+            firstName: "Bill",
+            lastName: "Stevens",
+            number: "07872937209",
+            address: ['Park Road', 'Blaby', 'Leicester', 46]
+        },
+        {
+            nickname: 'bill',
+            firstName: "William",
+            lastName: "Fisher",
+            number: "078729234209",
+            address: ['Moose Road', 'Whitby', 'Yorkshire', 146]
+        },
+        {
+            nickname: 'steve',
+            firstName: "Steve",
+            lastName: "Elliott",
+            number: "07970943757",
+            address: ['Park Road2', 'Blaby2', 'Leicester2', 462]
+        }
+    ];
 
-} 
+    function list(arr) {
+        for (var i = 0, l = arr.length; i < l; i++) {
+            console.log(arr[i].firstName);
+        }
+    };
+
+    function print(obj) {
+        for (var k in obj) {
+            if (k === 'address') {
+                console.log(obj[k].join(', '));
+            } else {
+                console.log(k + ': ' + obj[k]);
+            }
+        }
+    }
+
+    function fetchFriend(nickname, arr) {
+        return arr.filter(function (el) {
+            return el.nickname === nickname;
+        });
+    }
+
+    function search(nickname, friends) {
+        var friendArr = fetchFriend(nickname, friends);
+        for (var i = 0, l = friendArr.length; i < l; i++) {
+            print(friendArr[i]);
+        }
+    };
+
+    search('bill', friends);
+}
 
 
 function makeContactList() {
@@ -44,17 +97,17 @@ function makeContactList() {
      * You need something here to hold contacts. See length api for a hint:
      */
     var contacts = [];
-    
+
     return {
         // we implemented the length api for you //
-        length: function() {
+        length: function () {
             return contacts.length;
         },
-        addContact: function(contact){
+        addContact: function (contact) {
             contacts.push(contact);
         },
-        findContact: function(fullName){
-           //iterate through the contacts 
+        findContact: function (fullName) {
+            //iterate through the contacts 
         }
     }
 }
@@ -68,8 +121,8 @@ function makeContactList() {
 
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
-if((typeof process !== 'undefined') &&
-(typeof process.versions.node !== 'undefined')) {
+if ((typeof process !== 'undefined') &&
+    (typeof process.versions.node !== 'undefined')) {
     // here, export any references you need for tests //
     module.exports.makeContact = makeContact;
     module.exports.makeContactList = makeContactList;

@@ -6,3 +6,6 @@
  * 2. var, let,const:...
  * 
  */
+var a = [];
+let b = {};
+const name = 'Ken';

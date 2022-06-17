@@ -23,20 +23,21 @@
  */
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
-    
-    
-    
-    
-    // YOUR CODE GOES ABOVE HERE //
+    return Array.from({
+        length: 1 + Math.abs(end - start)
+      }, (_, i) => end > start ? start + i : start - i); 
+
+
 }
+// YOUR CODE GOES ABOVE HERE //
 
 
 
 
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
-if((typeof process !== 'undefined') &&
-   (typeof process.versions.node !== 'undefined')) {
+if ((typeof process !== 'undefined') &&
+    (typeof process.versions.node !== 'undefined')) {
     // here, export any references you need for tests //
     module.exports.range = range;
 }
