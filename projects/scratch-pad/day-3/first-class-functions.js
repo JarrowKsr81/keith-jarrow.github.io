@@ -13,13 +13,13 @@
  */
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    return function(value){
-        
-        
+    return function (value) {
+        return value > base;
+
     }
-    
-    
-    
+
+
+
     // YOUR CODE ABOVE HERE //
 }
 
@@ -30,10 +30,13 @@ function createGreaterThanFilter(base) {
  */
 function createLessThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    return function
-    
-    
-    
+    return function (value) {
+        return value < base;
+
+    }
+
+
+
     // YOUR CODE ABOVE HERE //
 }
 
@@ -44,12 +47,18 @@ function createLessThanFilter(base) {
  */
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
-    
-    // YOUR CODE ABOVE HERE //
+    return function (value) {
+        return value[0].toUpperCase() === startsWith.toUpperCase();
+    }
+
 }
+
+
+
+
+
+// YOUR CODE ABOVE HERE //
+
 
 /** 
  * Given a endsWith character, which will be a single character, return a 
@@ -58,10 +67,12 @@ function createStartsWithFilter(startsWith) {
  */
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
-    
+    return function (value) {
+        return value[value.length - 1].toLowerCase() === endsWith[endsWith.length - 1].toLowerCase();
+    }
+
+
+
     // YOUR CODE ABOVE HERE //
 }
 
@@ -74,10 +85,11 @@ function createEndsWithFilter(endsWith) {
  */
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
-    
+    var modify = [];
+    for (var i = 0; i < strings.length; i++) {
+        
+    }
+
     // YOUR CODE ABOVE HERE //
 }
 
@@ -92,15 +104,24 @@ function modifyStrings(strings, modify) {
  */
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
-    
+    var test = [];
+    for (var i = 0; i < strings.length; i++) {
+        if (strings[strings[i]] === true) {
+            test.push(strings[i]);
+            return true;
+
+        }else{
+            return false;
+        }
+    }return test;
+
+
+
     // YOUR CODE ABOVE HERE //
 }
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
-if((typeof process !== 'undefined') &&
+if ((typeof process !== 'undefined') &&
     (typeof process.versions.node !== 'undefined')) {
     // here, export any references you need for tests //
     module.exports.createGreaterThanFilter = createGreaterThanFilter;
@@ -108,5 +129,5 @@ if((typeof process !== 'undefined') &&
     module.exports.createStartsWithFilter = createStartsWithFilter;
     module.exports.createEndsWithFilter = createEndsWithFilter;
     module.exports.modifyStrings = modifyStrings;
-    module.exports.allStringsPass = allStringsPass;   
+    module.exports.allStringsPass = allStringsPass;
 }

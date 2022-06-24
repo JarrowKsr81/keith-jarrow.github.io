@@ -49,18 +49,20 @@ function isObject(value) {
  */
 function isCollection(value) {
     // YOUR CODE BELOW HERE // 
-    if (typeof value === 'object' && Array.isArray(value) === false && value !== null && value instanceof Date === false) {
-        return 'object';
-
-    } else {
-        return 'array';
+    if(Object.prototype.toString.call(value) === '[object Array]'
+|| Object.prototype.toString.call(value) === '[object Object]'){
+       return true; 
     }
-
-
-
-
-    // YOUR CODE ABOVE HERE //
+    else{
+        return false;
+    }
 }
+
+
+
+// YOUR CODE ABOVE HERE //
+
+
 
 /**
  * Given an input value, return the type of the value as a String

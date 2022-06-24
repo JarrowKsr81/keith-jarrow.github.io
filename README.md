@@ -25,3 +25,5 @@
 1) in terminal, type => git add -A
 2) in terminal, type => git commit -m "description in qoutes"
 3) in terminal, type => git push
+
+
