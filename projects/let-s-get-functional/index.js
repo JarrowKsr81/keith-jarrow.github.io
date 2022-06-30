@@ -37,6 +37,7 @@ var maleCount = function (array) {
 var femaleCount = function (array) {
     var females = _.reduce(array, function(customer){
 if (customer.gender === 'female'){
+    num
     return true;
 }else {
     return false;
@@ -55,28 +56,54 @@ var oldestCustomer = function (arr) {
         }
         return oldest;
     }
-    //     have all values so, how could i get the age values ?
-    // use a method to get the highest age, then check to see whos age matches the number
-
-    //   this is going to be the oldest users age now we need to check who
-
-    //  - **Output**: `String`
     
 };
 
-var youngestCustomer;
+var youngestCustomer = function(array) {
 
-var averageBalance;
+};
 
-var firstLetterCount;
+var averageBalance = function(array){
 
-var friendFirstLetterCount;
+};
 
-var friendsCount;
+var firstLetterCount = function(array){
 
-var topThreeTags;
+};
 
-var genderCount;
+var friendFirstLetterCount = function(array){
+
+};
+
+var friendsCount = function(array){
+
+};
+
+var topThreeTags = function(array){
+    let tagCount = [];
+    for(var i = 0; i < array.length; i++){
+        tagCount.push(array[i].tags)
+    }
+let allTag = {};
+for (let i = 0; i < tagCount.length; i++){
+    if(allTag[tagCount[i]]){
+        allTag[tagCount[i]] += 1;
+    }
+    else{
+        allTag[tagCount[i]] = 1;
+    }
+}
+var entries = Object.entries(allTag);
+entries.sort(funtion(a, b){
+return b[1] -a[1];
+});
+var top3 = [entries[0][0], entries[1][0], entries[2][0]];
+return top3;
+};
+
+var genderCount = function(array){
+    
+};
 
 //////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE ////////////////////////////////////////////

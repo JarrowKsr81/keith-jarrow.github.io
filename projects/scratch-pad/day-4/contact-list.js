@@ -35,6 +35,7 @@
 
 // YOUR CODE GOES BELOW HERE //
 function makeContact(id, nameFirst, nameLast) {
+
     var friends = [
         {
             nickname: 'bill',
@@ -90,7 +91,7 @@ function makeContact(id, nameFirst, nameLast) {
 
     search('bill', friends);
 }
-
+return makeContact()
 
 function makeContactList() {
     /*
@@ -106,10 +107,22 @@ function makeContactList() {
         addContact: function (contact) {
             contacts.push(contact);
         },
+        removeContact: function (contact){
+            for(var i = 0; i < contacts.length; i++){
+             if(contacts[i] === contact) {
+                }   return contacts.splice([i], 1);
+        
+            }
+        },
         findContact: function (fullName) {
+            for(var i = 0; i < contacts.length; i++) {
+                if(fullName === contacts[i].nameFirst + " " + contacts[i].nameLast) {
+                    }    return contacts[i];
             //iterate through the contacts 
-        }
+        
     }
+}
+    };
 }
 
 

@@ -2,6 +2,8 @@
 
 'use strict';
 
+const { result } = require("lodash");
+
 /**
  * IN CLASS EXERCISE: FIRST CLASS FUNCTIONS
  */
@@ -84,12 +86,12 @@ function createEndsWithFilter(endsWith) {
  * the modify Function, but we need to collect the results into some collection.
  */
 function modifyStrings(strings, modify) {
-    // YOUR CODE BELOW HERE //
-    var modify = [];
-    for (var i = 0; i < strings.length; i++) {
-        
+    // YOUR CODE BELOW HERE
+    let arr = [];
+    for (let i = 0; i < strings.length; i++) {
+        arr.push(modify(strings[i]));
     }
-
+    return arr;
     // YOUR CODE ABOVE HERE //
 }
 
@@ -104,21 +106,17 @@ function modifyStrings(strings, modify) {
  */
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
-    var test = [];
-    for (var i = 0; i < strings.length; i++) {
-        if (strings[strings[i]] === true) {
-            test.push(strings[i]);
-            return true;
-
-        }else{
-            return false;
-        }
-    }return test;
-
-
+   for (let i = 0; i < strings.length; i++){
+    if(test(strings[i]) === false){
+        return false;
+    }
+    }
+    return true;
+    
+}
 
     // YOUR CODE ABOVE HERE //
-}
+
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if ((typeof process !== 'undefined') &&
