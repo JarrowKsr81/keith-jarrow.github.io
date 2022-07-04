@@ -95,8 +95,9 @@ for (let i = 0; i < tagCount.length; i++){
 }
 var entries = Object.entries(allTag);
 entries.sort(funtion(a, b){
-return b[1] -a[1];
+return: b[1] - a[1],
 });
+
 var top3 = [entries[0][0], entries[1][0], entries[2][0]];
 return top3;
 };
